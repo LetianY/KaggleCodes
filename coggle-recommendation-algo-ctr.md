@@ -1,19 +1,37 @@
-## 广告-信息流跨域CTR预估
-### 赛题介绍
+## Ad-Influencer Cross-Domain CTR Prediction: 广告-信息流跨域CTR预估
+### Introduction to the competition: 赛题介绍
+Ad recommendation is mainly modeled based on users' historical exposure to ads, clicks and other behaviors, and if only ad domain data is used, user behavior data is sparse and behavior types are relatively single. And introducing cross-domain data of the same media can obtain the behavior data of the same ad user in other domains, deeply mining user interests and enriching user behavior characteristics. Introducing the behavior data of ad users in other media can also enrich the user and ad features.
+
+This contest expects players to optimize ad ctr prediction accuracy based on ad log data, basic user information and cross-domain data. The target domain is the ad domain and the source domain is the infomercial recommendation domain, and the user interest modeling is performed to help the accurate prediction of the ad domain CTR by obtaining user behavior data such as exposure and click on infomercial in the infomercial domain.
+
 广告推荐主要基于用户对广告的历史曝光、点击等行为进行建模，如果只是使用广告域数据，用户行为数据稀疏，行为类型相对单一。而引入同一媒体的跨域数据，可以获得同一广告用户在其他域的行为数据，深度挖掘用户兴趣，丰富用户行为特征。引入其他媒体的广告用户行为数据，也能丰富用户和广告特征。
 
 本赛题希望选手基于广告日志数据，用户基本信息和跨域数据优化广告ctr预估准确率。目标域为广告域，源域为信息流推荐域，通过获取用户在信息流域中曝光、点击信息流等行为数据，进行用户兴趣建模，帮助广告域CTR的精准预估。
 
-比赛地址：https://developer.huawei.com/consumer/cn/activity/starAI2022/algo/competition.html#/preliminary/info/006/rank
+[Contest Link: 比赛地址](https://developer.huawei.com/consumer/cn/activity/starAI2022/algo/competition.html#/preliminary/info/006/rank)
 
-### 数据说明
-提供的数据包括目标域用户行为数据，源域用户行为数据, 以下按照这2个维度分别 说明。
+### Description of data: 数据说明
+The data provided includes **target domain user behavior data** and **source domain user behavior data**.
+
+提供的数据包括目标域用户行为数据，源域用户行为数据。
 
 
-### 评估方式
+### Assessment methods: 评估方式
+Evaluation method: the sample CTR estimates of the advertising domain are counted, and GAUC and AUC are calculated
+
+Evaluation index: this competition uses the weighted sum of GAUC and AUC as the evaluation index with the following formula: xAUC = α∗GAUC + β∗AUC
+
+The higher xAUC means the better result and the higher ranking, where AUC is the AUC statistic of the whole sample, GAUC is the weighted sum of grouped AUCs, grouped by user as dimension, and the group weight is the exposure within the group/total exposure
+
+Preliminary round: α is 0.7, 𝛽 is 0.3
+
 评估方式：统计广告域的样本CTR预估值，计算GAUC和AUC
 
 评测指标： 本次比赛使用GAUC和AUC的加权求和作为评估指标，具体公式如下：xAUC=α∗GAUC+β∗AUC
 xAUC越高，代表结果越优，排名越靠前。其中，AUC为全体样本的AUC统计，GAUC为分组AUC的加权求和，以用户为维度分组，分组权值为分组内曝光量/总曝光)
+
 初赛：α 为 0.7，𝛽为 0.3
+
+### Task 1: Simple Trial with Logistic Regression
+
 
