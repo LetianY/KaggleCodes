@@ -1,4 +1,4 @@
-## Ad-Influencer Cross-Domain CTR Prediction: 广告-信息流跨域CTR预估
+## In-feed Ads Cross-Domain CTR Prediction: 广告-信息流跨域CTR预估
 ### Introduction to the competition: 赛题介绍
 Ad recommendation is mainly modeled based on users' historical exposure to ads, clicks and other behaviors, and if only ad domain data is used, user behavior data is sparse and behavior types are relatively single. And introducing cross-domain data of the same media can obtain the behavior data of the same ad user in other domains, deeply mining user interests and enriching user behavior characteristics. Introducing the behavior data of ad users in other media can also enrich the user and ad features.
 
