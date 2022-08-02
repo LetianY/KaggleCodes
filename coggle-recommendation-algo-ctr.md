@@ -33,5 +33,37 @@ xAUC越高，代表结果越优，排名越靠前。其中，AUC为全体样本�
 初赛：α 为 0.7，𝛽为 0.3
 
 ### Task 1: Simple Trial with Logistic Regression
+- Sign up for the contest
+- Download Contest Data
+- Read Data
+- Simple Logistic Regression Model
+```python
+cols_train = ['log_id', 'label', 'user_id', 'age', 'gender', 'residence', 'device_name',
+              'device_size', 'net_type', 'task_id', 'adv_id', 'creat_type_cd']
+cols_test = ['log_id', 'user_id', 'age', 'gender', 'residence', 'device_name',
+              'device_size', 'net_type', 'task_id', 'adv_id', 'creat_type_cd']
+
+# Data of user behaviour in the target domain 目标域用户行为数据
+train_ads = pd.read_csv('../input/ctr-prediction/train_data_ads.csv', usecols = cols_train)
+test_ads = pd.read_csv('../input/ctr-prediction/test_data_ads.csv', usecols = cols_test)
+
+# Data Sampling 数据采样
+train_ads = pd.concat([train_ads[train_ads['label'] == 0].sample(70000),
+                       train_ads[train_ads['label'] == 1].sample(10000)])
+
+# Load Logistic Regression Model for Training 加载逻辑回归模型，训练
+clf = LogisticRegression()
+clf.fit(train_ads.drop(['log_id', 'label', 'user_id'], axis=1),train_ads['label'])
+
+# Model Prediction 模型预测
+test_ads['pctr'] = clf.predict_proba(test_ads.drop(['log_id', 'user_id'], axis=1),)[:, 1]
+
+# Output to csv file 写入文件
+test_ads[['log_id', 'pctr']].to_csv('submission.csv',index=None)
+```
+- Submission Result
+
+### Task 2: Exploratory Data Analysis 比赛数据分析
+
 
 
