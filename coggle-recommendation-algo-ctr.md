@@ -61,9 +61,39 @@ test_ads['pctr'] = clf.predict_proba(test_ads.drop(['log_id', 'user_id'], axis=1
 # Output to csv file 写入文件
 test_ads[['log_id', 'pctr']].to_csv('submission.csv',index=None)
 ```
-- Submission Result
+- Submission Result 提交结果
 
 ### Task 2: Exploratory Data Analysis 比赛数据分析
+- Analysis of user behavior for the target domain (对目标域用户行为进行分析)
+1. What is the percentage of user overlap for the training and test sets? (对于训练集 和 测试集，用户重合的比例是多少)
+2. How many numeric and how many non-numeric fields are in the statistical fields? (统计字段中有多少数值字段，多少非数值字段)
+3. Count which user attributes (age, gender, mobile device, etc.) correlate most strongly with the label? (统计哪些用户属性, 如年龄、性别、手机设备等， 与标签相关性最强)
+
+- Analyze the source domain user behavior (对源域用户行为进行分析)
+1. What is the percentage of overlap between the source domain user behavior and the target domain user behavior for the training and test set users, respectively? (源域用户行为 与 目标域用户行为 训练集和测试集用户重合的比例分别是多少)
+2. How many numeric fields and how many non-numeric fields are in the statistics field? (统计字段中有多少数值字段，多少非数值字段)
+
+- Understand the logic of the data fields and try to group the data fields (理解数据字段的逻辑，并尝试对数据字段进行分组)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
