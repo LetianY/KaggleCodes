@@ -34,6 +34,7 @@ xAUC越高，代表结果越优，排名越靠前。其中，AUC为全体样本�
 
 ### Task 1: Simple Trial with Logistic Regression
 - Sign up for the contest
+![image](https://user-images.githubusercontent.com/45024501/182884941-0a0c1e29-17fd-4f89-8c61-1574546d341c.png)
 - Download Contest Data
 - Read Data
 - Simple Logistic Regression Model
@@ -62,6 +63,7 @@ test_ads['pctr'] = clf.predict_proba(test_ads.drop(['log_id', 'user_id'], axis=1
 test_ads[['log_id', 'pctr']].to_csv('submission.csv',index=None)
 ```
 - Submission Result 提交结果
+
 
 ### Task 2: Exploratory Data Analysis 比赛数据分析
 - Analysis of user behavior for the target domain (对目标域用户行为进行分析)
