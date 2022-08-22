@@ -63,7 +63,7 @@ test_ads['pctr'] = clf.predict_proba(test_ads.drop(['log_id', 'user_id'], axis=1
 test_ads[['log_id', 'pctr']].to_csv('submission.csv',index=None)
 ```
 - Submission Result 提交结果
-
+xAUC = 0.585658
 
 ### Task 2: Exploratory Data Analysis 比赛数据分析
 - Analysis of user behavior for the target domain (对目标域用户行为进行分析)
