@@ -9,3 +9,5 @@ This repo records my projects on Kaggle.
 [wids-2021-notebook.ipynb](https://github.com/LetianY/KaggleCodes/blob/main/wids-2021-notebook.ipynb) is a notebook to prediction whether paients admitted to ICU gets a special type of diabetes mellitus. The model is a simple LGBM one, but it's always interesting to explore the feature and learn techniques to impute data.
 
 [coggle-recommendation-algo-ctr](https://github.com/LetianY/KaggleCodes/blob/main/coggle-recommendation-algo-ctr.md) is an updating file of ctr prediction. This is my first time to try topics about recommendation system outside classroom.
+
+[fraud-detection](https://github.com/LetianY/KaggleCodes/blob/main/fraud_detection.ipynb) gives one solution for ethreum fraud detection (Natixis Hacktivity 2022 technology hackathon finalist).
